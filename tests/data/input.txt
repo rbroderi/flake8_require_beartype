@@ -1,0 +1,65 @@
+from __future__ import annotations
+
+from typing import Any
+
+
+class ClassTest:
+
+    @staticmethod
+    def MethodTest() -> None:
+        ...
+
+    @classmethod
+    def MethodTestWithCLS(cls) -> None:
+        ...
+
+    def MethodTestWithSelf(self) -> None:
+        ...
+
+    def MethodTestWithArg(self, integer: int) -> None:
+        ...
+
+    def MethodTestWithArgs(self, integer: int, string: str) -> None:
+        ...
+
+    @classmethod
+    def ClassTestWithArg(cls, integer: int) -> None:
+        ...
+
+    @classmethod
+    def ClassMethodTestWithArgs(cls, integer: int, string: str) -> None:
+        ...
+
+    @staticmethod
+    def StaticMethodTestWithArg(integer: int) -> None:
+        ...
+
+    @staticmethod
+    def StaticMethodTestWithArgs(integer: int, string: str) -> None:
+        ...
+
+    def MethodTestWithArgsandStarArgs(self, integer: int, *args: Any) -> None:
+        ...
+
+    def MethodTestWithSplat(self, *args: Any, **kwargs: Any) -> None:
+        ...
+
+
+def FunctionTest() -> None:
+    ...
+
+
+def FunctionTestWithArg(integer: int) -> None:
+    ...
+
+
+def FunctionTestWithArgs(integer: int, string: str) -> None:
+    ...
+
+
+def FunctionTestWithArgsandStarArgs(integer: int, *args: Any) -> None:
+    ...
+
+
+def FunctionTestWithSplat(*args: Any, **kwargs: Any) -> None:
+    ...
