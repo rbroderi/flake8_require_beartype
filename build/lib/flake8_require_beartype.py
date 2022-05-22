@@ -16,7 +16,7 @@ RBT002 = 'RBT002 Method missing @beartype'  # noqa: E501
 
 class Visitor(ast.NodeVisitor):
     def __init__(self) -> None:
-        self.errors: set[tuple[int, int, str]] = set()
+        self.errors: list[tuple[int, int, str]] = []
         self._from_imports: dict[str, str] = {}
 
     def visit_ClassDef(self, node: ast.ClassDef) -> None:
@@ -39,11 +39,11 @@ class Visitor(ast.NodeVisitor):
             for arg in node.args.args:
                 if arg.arg not in {'self', 'cls', 'mcls'}:
                     if is_method:
-                        self.errors.add(
+                        self.errors.append(
                             (node.lineno, node.col_offset, RBT002),
                         )
                     else:
-                        self.errors.add(
+                        self.errors.append(
                             (node.lineno, node.col_offset, RBT001),
                         )
         self.generic_visit(node)

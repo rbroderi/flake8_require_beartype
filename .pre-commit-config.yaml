@@ -1,4 +1,9 @@
+exclude: ^build/
 repos:
+-   repo: meta
+    hooks:
+    -   id: check-useless-excludes
+    -   id: check-hooks-apply
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.2.0
     hooks:
@@ -8,7 +13,6 @@ repos:
     -   id: debug-statements
     -   id: double-quote-string-fixer
     -   id: name-tests-test
-    -   id: requirements-txt-fixer
 -   repo: https://github.com/asottile/setup-cfg-fmt
     rev: v1.20.1
     hooks:
