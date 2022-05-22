@@ -20,18 +20,3 @@ than self, cls, or mcls
 ## rationale
 
 Helps to add / keep beartype runtime checking in a code base.
-
-
-## as a pre-commit hook
-
-See [pre-commit](https://github.com/rbroderi/precommithooks) for instructions
-
-Sample `.pre-commit-config.yaml`:
-
-```yaml
--   repo: https://github.com/rbroderi/precommithooks
-    rev: HEAD
-    hooks:
-    -   id: require-beartype
-        additional_dependencies: [beartype]
-```
