@@ -2,3 +2,5 @@
 *.pyc
 /.coverage
 /.tox
+build/
+dist/
